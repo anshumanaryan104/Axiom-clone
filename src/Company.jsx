@@ -11,7 +11,7 @@ function Company() {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: 'rgba(237,233,230,255)'}}>
+    <div className="min-h-screen bg-[#ede9e6]">
       {/* Header */}
       <header className="shadow-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50" style={{backgroundColor: 'RGB(237, 233, 230, 1)'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,11 @@ function Company() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {/* Products Dropdown */}
+              
+              <div className="bg-gray-100 px-4 py-2 rounded-lg">
+                
+                <div className="flex items-center space-x-6">
+                  {/* Products Dropdown */}
               <div 
                 className="relative"
                 onMouseEnter={() => setIsProductsDropdownOpen(true)}
@@ -44,7 +48,7 @@ function Company() {
                       {/* Liver Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
                         <span className="text-gray-900 font-medium">Liver</span>
-                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" onClick={() => window.location.href = '/products/liver'}>
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -84,10 +88,8 @@ function Company() {
                   </div>
                 )}
               </div>
-              <div className="bg-gray-100 px-4 py-2 rounded-lg">
-                <div className="flex items-center space-x-6">
                   <button
-                    onClick={() => scrollToSection('datasets')}
+                    onClick={() => window.location.href = '/dataset'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Datasets
@@ -149,7 +151,7 @@ function Company() {
               <div className="flex flex-col space-y-2">
                                  <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
-                  <button onClick={() => scrollToSection('datasets')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
+                  <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
                   <button onClick={() => scrollToSection('security')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => scrollToSection('company')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
@@ -167,7 +169,7 @@ function Company() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* About Us Section */}
-        <section className="py-10 bg-gray-50">
+        <section className="py-10 bg-[#ede9e6]">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                          {/* About Us Button */}
              <button style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-lg transition-colors duration-200 mb-2 text-sm">
@@ -183,7 +185,7 @@ function Company() {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-[#ede9e6]">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12">
               {/* Left Navigation */}
@@ -381,7 +383,7 @@ function Company() {
               </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-16">
+      <footer className="bg-[#f4f2f0] py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Section - Axiom Brand */}

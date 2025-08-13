@@ -14,7 +14,7 @@ function Publications() {
     <div className="min-h-screen" style={{backgroundColor: 'rgba(237,233,230,255)'}}>
       {/* Header */}
       <header className="shadow-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50" style={{backgroundColor: 'RGB(237, 233, 230, 1)'}}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex items-center justify-between h-16 lg:h-20">
                          {/* Logo Section */}
              <div className="flex-shrink-0">
@@ -24,27 +24,30 @@ function Publications() {
              </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              <div 
+            <nav className="hidden lg:flex items-center space-x-8 ">
+              
+              <div className="bg-gray-100 px-4 py-2 rounded-lg">
+                <div className="flex items-center space-x-6">
+                <div 
                 className="relative"
                 onMouseEnter={() => setIsProductsDropdownOpen(true)}
                 onMouseLeave={() => setIsProductsDropdownOpen(false)}
               >
                 <button
                   onClick={() => scrollToSection('products')}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors "
                 >
                   Products
                 </button>
                 
                 {/* Products Dropdown */}
                 {isProductsDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-gray-100 px-4 py-2 rounded-lg">
                     <div className="grid grid-cols-2 gap-4">
                       {/* Liver Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
                         <span className="text-gray-900 font-medium">Liver</span>
-                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" onClick={() => window.location.href = '/products/liver'}>
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -84,16 +87,14 @@ function Publications() {
                   </div>
                 )}
               </div>
-              <div className="bg-gray-100 px-4 py-2 rounded-lg">
-                <div className="flex items-center space-x-6">
                   <button
-                    onClick={() => scrollToSection('datasets')}
+                    onClick={() => window.location.href = '/dataset'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Datasets
                   </button>
                   <button
-                    onClick={() => scrollToSection('security')}
+                    onClick={() => window.location.href = '/security'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Security
@@ -149,7 +150,7 @@ function Publications() {
               <div className="flex flex-col space-y-2">
                                  <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
-                  <button onClick={() => scrollToSection('datasets')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
+                  <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
                   <button onClick={() => scrollToSection('security')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
@@ -167,7 +168,7 @@ function Publications() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* Publications Title Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#ede9e6]">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
               Publications
@@ -176,7 +177,7 @@ function Publications() {
         </section>
 
                  {/* Filter Buttons Section */}
-         <section className="bg-gray-50 -mt-10">
+         <section className="bg-[#ede9e6] -mt-10">
            <div className="max-w-4xl mx-auto px-0 ml-20">
              <div className="flex justify-start ">
                <div className="flex space-x-1">
@@ -236,7 +237,7 @@ function Publications() {
          </section>
 
                                                                                                                                                                                                                                                                                                                                {/* Publications Cards Section */}
-              <section className="py-12 bg-gray-50">
+              <section className="py-12 bg-[#ede9e6]">
                 <div className="w-full px-12 lg:px-16">
                   <div className="space-y-6">
                     {/* Card 1 - VIDEO */}
@@ -331,7 +332,7 @@ function Publications() {
               </section>
 
           {/* Newsletter Subscription Section */}
-          <section className="pt-0 pb-8 bg-gray-50">
+          <section className="pt-0 pb-8 bg-[#ede9e6]">
             <div className="w-full px-12 lg:px-16">
                                  <div className="bg-white rounded-xl shadow-lg pt-12 pr-10 pb-6 pl-12 text-center min-h-[350px] flex flex-col justify-center">
                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
@@ -355,7 +356,7 @@ function Publications() {
                </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-16">
+      <footer className="bg-[#f4f2f0] py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Section - Axiom Brand */}
