@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Liver() {
+function HIV() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -44,12 +44,12 @@ function Liver() {
                 {isProductsDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
                     <div className="grid grid-cols-2 gap-4">
-                      {/* Liver Card */}
+                      {/* HIV Card */}
                       <div 
-                        onClick={() => window.location.href = '/products/liver'}
+                        onClick={() => window.location.href = '/products/HIV'}
                         className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
                       >
-                        <span className="text-gray-900 font-medium">Liver</span>
+                        <span className="text-gray-900 font-medium">HIV</span>
                         <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -57,9 +57,19 @@ function Liver() {
                         </button>
                       </div>
                       
-                      {/* Immunogenicity Card */}
+                      {/* Dengue Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Immunogenicity <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <span className="text-gray-900 font-medium">Dengue</span>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                          <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      {/* Lung Cancer Card */}
+                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                        <span className="text-gray-900 font-medium">Lung cancer <span className="text-gray-400 text-sm">(coming soon)</span></span>
                         <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                           <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -67,19 +77,9 @@ function Liver() {
                         </button>
                       </div>
                       
-                      {/* Heart Card */}
+                      {/* Radioactive Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Heart <span className="text-gray-400 text-sm">(coming soon)</span></span>
-                        <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                          </svg>
-                        </button>
-                      </div>
-                      
-                      {/* Kidney Card */}
-                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Kidney <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <span className="text-gray-900 font-medium">Radioactive <span className="text-gray-400 text-sm">(coming soon)</span></span>
                         <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                           <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -164,7 +164,7 @@ function Liver() {
 
       {/* Main Content */}
       <div className="pt-20">
-        {/* Liver Title Section */}
+        {/* HIV Title Section */}
         <section className="py-16" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
             {/* Yellow LIVER INJURY Box */}
@@ -174,12 +174,12 @@ function Liver() {
             
             {/* Main Message */}
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-3xl mx-auto">
-              Axiom accurately predicts human liver toxicity
+              Axiom accurately predicts human hiv toxicity
             </h2>
             
             {/* Subtitle */}
             <p className="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
-              20-25% of clinical trials fail due to drug-induced liver injury, Axiom wants to eliminate these failures
+              20-25% of clinical trials fail due to drug-induced hiv injury, Axiom wants to eliminate these failures
             </p>
           </div>
         </section>
@@ -558,7 +558,7 @@ function Liver() {
               {/* Descriptive Text */}
               <div className="">
                 <p className="text-lg text-gray-700">
-                  We did the lab work to build the world's largest human liver dataset
+                  We did the lab work to build the world's largest human hiv dataset
                 </p>
                 <p className="text-lg text-gray-700">
                   then used it to train highly accurate models.
@@ -626,7 +626,7 @@ function Liver() {
                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                      We did the lab work to<br />
                      create the world's largest<br />
-                     primary human liver dataset
+                     primary human hiv dataset
                    </h2>
                    
                    {/* Bullet Points */}
@@ -638,7 +638,7 @@ function Liver() {
                          </svg>
                        </div>
                        <p className="text-lg text-gray-700 leading-relaxed">
-                         115,000+ molecules exposed to primary human liver cells.
+                         115,000+ molecules exposed to primary human hiv cells.
                        </p>
                      </div>
                      
@@ -973,7 +973,7 @@ function Liver() {
                         <div className="mt-4 space-y-3">
                           <div className="flex items-center space-x-2">
                             <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                            <span className="text-sm text-gray-700">Liver Injury Risk</span>
+                            <span className="text-sm text-gray-700">HIV Injury Risk</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center space-x-2">
@@ -1125,7 +1125,7 @@ function Liver() {
                               <div className="w-2 h-2 bg-red-500 rounded-full absolute top-3 right-3"></div>
                               <div className="w-4 h-4 bg-blue-500 rounded-full absolute bottom-2 left-1/2 transform -translate-x-1/2"></div>
                             </div>
-                            <p className="text-xs text-gray-700">10M+ liver images</p>
+                            <p className="text-xs text-gray-700">10M+ hiv images</p>
                           </div>
                         </div>
                         <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mx-auto flex items-center justify-center">
@@ -1270,7 +1270,7 @@ function Liver() {
                         </div>
                         <div className="bg-white rounded-lg p-3 border border-gray-200">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="text-sm font-semibold text-gray-900">Liver Injury Risk</h4>
+                            <h4 className="text-sm font-semibold text-gray-900">HIV Injury Risk</h4>
                             <div className="flex items-center space-x-1">
                               <span className="text-xs text-gray-600">Cmax: 19.06-89.14 µM</span>
                               <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1343,7 +1343,7 @@ function Liver() {
                     modern web application
                   </h2>
                   <p className="text-lg text-gray-700">
-                    Study clinical liver injury risk with powerful data visualization<br />
+                    Study clinical hiv injury risk with powerful data visualization<br />
                     and predictions.
                   </p>
                 </div>
@@ -1437,9 +1437,9 @@ function Liver() {
                       {/* Main Content */}
                       <div className="flex-1 p-6">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                          {/* Left Column - Liver Injury Risk */}
+                          {/* Left Column - HIV Injury Risk */}
                           <div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-4">Liver Injury Risk</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-4">HIV Injury Risk</h3>
                             <div className="mb-2 flex items-center justify-between">
                               <span className="text-sm text-gray-600">Cmax: 0.89-45.9 µM</span>
                               <div className="w-4 h-4 bg-gray-300 rounded"></div>
@@ -1541,7 +1541,7 @@ function Liver() {
                                   <path d="M10,95 Q20,90 30,85 Q40,75 50,65 Q60,55 70,45 Q80,40 90,35" stroke="#a855f7" strokeWidth="1.5" fill="none"/>
                                   {/* Apoptosis - Pink */}
                                   <path d="M10,92 Q20,87 30,82 Q40,72 50,62 Q60,52 70,42 Q80,37 90,32" stroke="#ec4899" strokeWidth="1.5" fill="none"/>
-                                  {/* Liver Bioactivity - Light Blue */}
+                                  {/* HIV Bioactivity - Light Blue */}
                                   <path d="M10,75 Q20,70 30,65 Q40,55 50,45 Q60,35 70,25 Q80,20 90,15" stroke="#06b6d4" strokeWidth="1.5" fill="none"/>
                                   {/* Mitochondrial - Dark Blue */}
                                   <path d="M10,88 Q20,83 30,78 Q40,68 50,58 Q60,48 70,38 Q80,33 90,28" stroke="#1e40af" strokeWidth="1.5" fill="none"/>
@@ -1595,7 +1595,7 @@ function Liver() {
                                   <div className="text-gray-900">60.85</div>
                                   <div className="text-gray-900">&gt;100</div>
                                   
-                                  <div className="text-gray-600">Liver Bioactivity</div>
+                                  <div className="text-gray-600">HIV Bioactivity</div>
                                   <div className="text-gray-900">10.10</div>
                                   <div className="text-gray-900">28.89</div>
                                   
@@ -1613,27 +1613,27 @@ function Liver() {
                 </div>
               </section>
 
-              {/* Liver Services Section */}
+              {/* HIV Services Section */}
               <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                   <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                    Liver Services
+                    HIV Services
                   </h2>
                   <p className="text-lg text-gray-700">
                     Axiom offers a variety of services for understanding drug induced<br />
-                    liver injury.
+                    hiv injury.
                   </p>
                 </div>
               </section>
 
-              {/* Clinical Liver Risk Assessment Flowchart */}
+              {/* Clinical HIV Risk Assessment Flowchart */}
               <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="bg-white rounded-2xl shadow-lg p-8">
-                    {/* Top Section - In Silico Clinical Liver Risk Assessment */}
+                    {/* Top Section - In Silico Clinical HIV Risk Assessment */}
                     <div className="mb-8">
                       <div className="bg-yellow-400 text-black px-4 py-2 rounded-lg text-lg font-bold mb-6 inline-block">
-                        In Silico Clinical Liver Risk Assessment
+                        In Silico Clinical HIV Risk Assessment
                       </div>
                       
                       <div className="flex items-center space-x-4 mb-6">
@@ -1724,7 +1724,7 @@ function Liver() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                         
-                        {/* Final Output - Human Torso with Liver */}
+                        {/* Final Output - Human Torso with HIV */}
                         <div className="w-16 h-16 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center">
                           <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -1838,7 +1838,7 @@ function Liver() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                         
-                        {/* Final Output - Human Torso with Liver (Same as In Silico) */}
+                        {/* Final Output - Human Torso with HIV (Same as In Silico) */}
                         <div className="w-16 h-16 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center">
                           <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -1959,7 +1959,7 @@ function Liver() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                         
-                        {/* Final Output - Human Torso with Liver (Same as Previous Sections) */}
+                        {/* Final Output - Human Torso with HIV (Same as Previous Sections) */}
                         <div className="w-16 h-16 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center">
                           <svg className="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -1979,7 +1979,7 @@ function Liver() {
               {/* Left Section - Axiom Brand */}
               <div className="md:col-span-1">
                 <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
-                <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
+                <p className="text-gray-700 mb-8">Faster and Accurate drug discovery</p>
                 <p className="text-gray-700 text-sm">© 2025</p>
               </div>
 
@@ -1987,10 +1987,10 @@ function Liver() {
               <div>
                 <h4 className="text-gray-700 font-medium mb-4">Products</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Liver</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Brain <span className="text-gray-400">(coming soon)</span></a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Immunogenicity <span className="text-gray-400">(coming soon)</span></a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Heart <span className="text-gray-400">(coming soon)</span></a></li>
+                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">HIV</a></li>
+                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Radioactive <span className="text-gray-400">(coming soon)</span></a></li>
+                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Dengue <span className="text-gray-400">(coming soon)</span></a></li>
+                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Lung cancer <span className="text-gray-400">(coming soon)</span></a></li>
                 </ul>
               </div>
 
@@ -2006,7 +2006,7 @@ function Liver() {
               <div>
                 <h4 className="text-gray-700 font-medium mb-4">Security</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Information</a></li>
+                  <li><a href="/security" className="text-gray-600 hover:text-gray-900 transition-colors">Information</a></li>
                 </ul>
               </div>
 
@@ -2027,4 +2027,4 @@ function Liver() {
   );
 }
 
-export default Liver;
+export default HIV;

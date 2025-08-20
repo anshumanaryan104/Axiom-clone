@@ -43,12 +43,12 @@ function Security() {
                 {isProductsDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
                     <div className="grid grid-cols-2 gap-4">
-                      {/* Liver Card */}
+                      {/* HIV Card */}
                       <div 
-                        onClick={() => window.location.href = '/products/liver'}
+                        onClick={() => window.location.href = '/products/HIV'}
                         className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
                       >
-                        <span className="text-gray-900 font-medium">Liver</span>
+                        <span className="text-gray-900 font-medium">HIV</span>
                         <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -56,9 +56,19 @@ function Security() {
                         </button>
                       </div>
                       
-                      {/* Immunogenicity Card */}
+                      {/* Dengue Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Immunogenicity <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <span className="text-gray-900 font-medium">Dengue</span>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                          <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      {/* Lung Cancer Card */}
+                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                        <span className="text-gray-900 font-medium">Lung cancer <span className="text-gray-400 text-sm">(coming soon)</span></span>
                         <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                           <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -66,19 +76,9 @@ function Security() {
                         </button>
                       </div>
                       
-                      {/* Heart Card */}
+                      {/* Radioactive Card */}
                       <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Heart <span className="text-gray-400 text-sm">(coming soon)</span></span>
-                        <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                          </svg>
-                        </button>
-                      </div>
-                      
-                      {/* Kidney Card */}
-                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                        <span className="text-gray-900 font-medium">Kidney <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <span className="text-gray-900 font-medium">Radioactive <span className="text-gray-400 text-sm">(coming soon)</span></span>
                         <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
                           <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -552,7 +552,7 @@ function Security() {
             {/* Left Section - Axiom Brand */}
             <div className="md:col-span-1">
               <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
-              <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
+              <p className="text-gray-700 mb-8">Faster and Accurate drug discovery</p>
               <p className="text-gray-700 text-sm">© 2025</p>
             </div>
 
@@ -560,10 +560,10 @@ function Security() {
             <div>
               <h4 className="text-gray-700 font-medium mb-4">Products</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Liver</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Brain <span className="text-gray-400">(coming soon)</span></a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Immunogenicity <span className="text-gray-400">(coming soon)</span></a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Heart <span className="text-gray-400">(coming soon)</span></a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">HIV</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Radioactive <span className="text-gray-400">(coming soon)</span></a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Dengue <span className="text-gray-400">(coming soon)</span></a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Lung cancer <span className="text-gray-400">(coming soon)</span></a></li>
               </ul>
             </div>
 
@@ -579,7 +579,7 @@ function Security() {
             <div>
               <h4 className="text-gray-700 font-medium mb-4">Security</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Information</a></li>
+                <li><a href="/security" className="text-gray-600 hover:text-gray-900 transition-colors">Information</a></li>
               </ul>
             </div>
 
