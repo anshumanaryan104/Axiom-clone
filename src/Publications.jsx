@@ -97,12 +97,7 @@ function Publications() {
                   >
                     Datasets
                   </button>
-                  <button
-                    onClick={() => window.location.href = '/security'}
-                    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    Security
-                  </button>
+
                   <button
                     onClick={() => window.location.href = '/publications'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -150,7 +145,7 @@ function Publications() {
                                  <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
                   <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
-                  <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
+
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
@@ -383,13 +378,7 @@ function Publications() {
               </ul>
             </div>
 
-            {/* Security Column */}
-            <div>
-              <h4 className="text-gray-700 font-medium mb-4">Security</h4>
-              <ul className="space-y-2">
-                <li><a href="/security" className="text-gray-600 hover:text-gray-900 transition-colors">Information</a></li>
-              </ul>
-            </div>
+
 
             {/* Company Column */}
             <div>

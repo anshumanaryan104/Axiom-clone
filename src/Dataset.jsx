@@ -92,12 +92,7 @@ function Dataset() {
                   >
                     Datasets
                   </button>
-                  <button
-                    onClick={() => window.location.href = '/security'}
-                    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    Security
-                  </button>
+
                   <button
                     onClick={() => window.location.href = '/publications'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -145,7 +140,7 @@ function Dataset() {
                                  <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
                   <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
-                  <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
+
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
@@ -244,13 +239,7 @@ function Dataset() {
                 </ul>
               </div>
 
-              {/* Security Column */}
-              <div>
-                <h4 className="text-gray-700 font-medium mb-4">Security</h4>
-                <ul className="space-y-2">
-                  <li><button onClick={() => navigate('/security')} className="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-200 ease-out text-left">Information</button></li>
-                </ul>
-              </div>
+
 
               {/* Company Column */}
               <div>
