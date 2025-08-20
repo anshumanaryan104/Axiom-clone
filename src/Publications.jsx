@@ -11,20 +11,21 @@ function Publications() {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: 'rgba(237,233,230,255)'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
       {/* Header */}
-      <header className="shadow-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50" style={{backgroundColor: 'RGB(237, 233, 230, 1)'}}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      
+      <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
                          {/* Logo Section */}
              <div className="flex-shrink-0">
-               <a href="/" className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight hover:text-gray-700 transition-colors">
-                 Axiom
+               <a href="/" className="flex items-center" aria-label="Universal Drug Discovery">
+                 <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-8 lg:h-20 w-auto" />
                </a>
              </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8 ">
+            <nav className="hidden lg:flex items-center space-x-8">
               
               <div className="bg-gray-100 px-4 py-2 rounded-lg">
                 <div className="flex items-center space-x-6">
@@ -33,21 +34,24 @@ function Publications() {
                 onMouseEnter={() => setIsProductsDropdownOpen(true)}
                 onMouseLeave={() => setIsProductsDropdownOpen(false)}
               >
-                <button
-                  onClick={() => scrollToSection('products')}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors "
-                >
-                  Products
-                </button>
+                 <button
+                   onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                   className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                 >
+                   Products
+                 </button>
                 
                 {/* Products Dropdown */}
                 {isProductsDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-gray-100 px-4 py-2 rounded-lg">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
                     <div className="grid grid-cols-2 gap-4">
                       {/* Liver Card */}
-                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                      <div 
+                        onClick={() => window.location.href = '/products/liver'}
+                        className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
+                      >
                         <span className="text-gray-900 font-medium">Liver</span>
-                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" onClick={() => window.location.href = '/products/liver'}>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -119,15 +123,10 @@ function Publications() {
             <div className="hidden lg:flex items-center space-x-3">
               <button
                 onClick={() => scrollToSection('contact')}
-                style={{backgroundColor: '#ffe24e'}}
-                className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+                style={{backgroundColor: '#12a2df'}}
+                className="hover:bg-[#12a2df] text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
               >
                 Contact Us
-              </button>
-              <button 
-                style={{backgroundColor: '#ffe24e'}}
-                className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
-                Try Demo
               </button>
             </div>
 
@@ -151,13 +150,12 @@ function Publications() {
                                  <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
                   <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
-                  <button onClick={() => scrollToSection('security')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
+                  <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
                 <div className="flex space-x-3 px-3 pt-2">
-                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
-                  <button style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Try Demo</button>
+                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#12a2df'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
                 </div>
               </div>
             </div>
@@ -168,7 +166,7 @@ function Publications() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* Publications Title Section */}
-        <section className="py-20 bg-[#ede9e6]">
+        <section className="py-20 bg-[#12a2df]">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
               Publications
@@ -177,7 +175,7 @@ function Publications() {
         </section>
 
                  {/* Filter Buttons Section */}
-         <section className="bg-[#ede9e6] -mt-10">
+         <section className="bg-[#12a2df] -mt-10">
            <div className="max-w-4xl mx-auto px-0 ml-20">
              <div className="flex justify-start ">
                <div className="flex space-x-1">
@@ -237,7 +235,7 @@ function Publications() {
          </section>
 
                                                                                                                                                                                                                                                                                                                                {/* Publications Cards Section */}
-              <section className="py-12 bg-[#ede9e6]">
+              <section className="py-12 bg-[#12a2df]">
                 <div className="w-full px-12 lg:px-16">
                   <div className="space-y-6">
                     {/* Card 1 - VIDEO */}
@@ -298,7 +296,7 @@ function Publications() {
                          <p className="text-sm text-gray-500">February 15, 2025</p>
                        </div>
                      </div>
-                     <button className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                     <button className="w-10 h-10 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                        <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                        </svg>
@@ -332,7 +330,7 @@ function Publications() {
               </section>
 
           {/* Newsletter Subscription Section */}
-          <section className="pt-0 pb-8 bg-[#ede9e6]">
+          <section className="pt-0 pb-8 bg-[#12a2df]">
             <div className="w-full px-12 lg:px-16">
                                  <div className="bg-white rounded-xl shadow-lg pt-12 pr-10 pb-6 pl-12 text-center min-h-[350px] flex flex-col justify-center">
                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
@@ -344,7 +342,7 @@ function Publications() {
                       placeholder="Enter your email"
                       className="flex-1 max-w-md px-6 py-8 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-lg"
                     />
-                   <button className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                   <button className="w-16 h-16 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                      <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                      </svg>
@@ -356,12 +354,12 @@ function Publications() {
                </main>
 
       {/* Footer */}
-      <footer className="bg-[#f4f2f0] py-16">
+      <footer className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Section - Axiom Brand */}
             <div className="md:col-span-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Axiom</h3>
+              <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
               <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
               <p className="text-gray-700 text-sm">© 2025</p>
             </div>

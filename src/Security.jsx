@@ -10,17 +10,17 @@ function Security() {
   };
 
   return (
-    <div className="min-h-screen bg-[#ede9e6]">
+    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
       {/* Header */}
-      <header className="shadow-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50" style={{backgroundColor: 'RGB(237, 233, 230, 1)'}}>
+      <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section */}
-            <div className="flex-shrink-0">
-              <a href="/" className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight hover:text-gray-700 transition-colors">
-                Axiom
-              </a>
-            </div>
+                         {/* Logo Section */}
+             <div className="flex-shrink-0">
+               <a href="/" className="flex items-center" aria-label="Universal Drug Discovery">
+                 <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-8 lg:h-20 w-auto" />
+               </a>
+             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
@@ -32,21 +32,24 @@ function Security() {
                 onMouseEnter={() => setIsProductsDropdownOpen(true)}
                 onMouseLeave={() => setIsProductsDropdownOpen(false)}
               >
-                <button
-                  onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  Products
-                </button>
+                 <button
+                   onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                   className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                 >
+                   Products
+                 </button>
                 
                 {/* Products Dropdown */}
                 {isProductsDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
                     <div className="grid grid-cols-2 gap-4">
                       {/* Liver Card */}
-                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                      <div 
+                        onClick={() => window.location.href = '/products/liver'}
+                        className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
+                      >
                         <span className="text-gray-900 font-medium">Liver</span>
-                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" onClick={() => window.location.href = '/products/liver'}>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -93,7 +96,7 @@ function Security() {
                     Datasets
                   </button>
                   <button
-                    onClick={() => scrollToSection('security')}
+                    onClick={() => window.location.href = '/security'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Security
@@ -118,15 +121,10 @@ function Security() {
             <div className="hidden lg:flex items-center space-x-3">
               <button
                 onClick={() => scrollToSection('contact')}
-                style={{backgroundColor: '#ffe24e'}}
+                style={{backgroundColor: '#12a2df'}}
                 className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
               >
                 Contact Us
-              </button>
-              <button 
-                style={{backgroundColor: '#ffe24e'}}
-                className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
-                Try Demo
               </button>
             </div>
 
@@ -147,16 +145,15 @@ function Security() {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-2">
-                <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
+                                 <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
                   <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
-                  <button onClick={() => scrollToSection('security')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
+                  <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
                   <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
                 <div className="flex space-x-3 px-3 pt-2">
-                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
-                  <button style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Try Demo</button>
+                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#12a2df'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
                 </div>
               </div>
             </div>
@@ -166,10 +163,10 @@ function Security() {
 
 
         {/* Data & Trust Banner Section */}
-        <section className="py-16" style={{backgroundColor: '#f2efea'}}>
+        <section className="py-16" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
             {/* Yellow DATA & TRUST Box */}
-            <div className="inline-block px-6 py-2 rounded-lg font-semibold text-sm mb-8 uppercase tracking-wide" style={{backgroundColor: '#ffe24e'}}>
+            <div className="inline-block px-6 py-2 rounded-lg font-semibold text-sm mb-8 uppercase tracking-wide bg-white">
               DATA & TRUST
             </div>
             
@@ -181,7 +178,7 @@ function Security() {
         </section>
 
         {/* Cloud Security Section */}
-        <section className="py-16" style={{backgroundColor: '#f2efea'}}>
+        <section className="py-16" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Section - Text */}
@@ -240,11 +237,11 @@ function Security() {
               </div>
 
               {/* Right Section - Graphical Representation */}
-              <div className="bg-[#f2f0ee] rounded-2xl shadow-lg p-8">
+              <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-center justify-center space-x-8 py-36">
                   {/* Left Circle - Animated Loading Wheel */}
                   <div className="relative">
-                    <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-24 h-24 bg-[#12a2df] rounded-full flex items-center justify-center shadow-lg">
                       {/* Animated Loading Wheel */}
                       <div className="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                     </div>
@@ -265,7 +262,7 @@ function Security() {
           </div>
         </section>
         {/* Cloud Security Section */}
-        <section className="py-16" style={{backgroundColor: '#f2efea'}}>
+        <section className="py-16" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Section - Text */}
@@ -324,11 +321,11 @@ function Security() {
               </div>
 
               {/* Right Section - Graphical Representation */}
-              <div className="bg-[#f2f0ee] rounded-2xl shadow-lg p-8">
+              <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-center justify-center space-x-8 py-36">
                   {/* Left Circle - Animated Loading Wheel */}
                   <div className="relative">
-                    <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-24 h-24 bg-[#12a2df] rounded-full flex items-center justify-center shadow-lg">
                       {/* Animated Loading Wheel */}
                       <div className="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                     </div>
@@ -350,12 +347,12 @@ function Security() {
                  </section>
 
         {/* Security Features Grid Section */}
-        <section className="py-16 bg-[#ede9e6]">
+        <section className="py-16 bg-[#12a2df]">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Card 1: Shared-Nothing Data Architecture */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
@@ -369,8 +366,8 @@ function Security() {
               </div>
 
               {/* Card 2: Zero AI Training on Customer Data */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
                     <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" strokeWidth="2"/>
@@ -386,8 +383,8 @@ function Security() {
               </div>
 
               {/* Card 3: Zero-Retention Data Handling */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" strokeWidth="2"/>
@@ -403,8 +400,8 @@ function Security() {
               </div>
 
               {/* Card 4: Enterprise-Grade Encryption */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                   </svg>
@@ -418,8 +415,8 @@ function Security() {
               </div>
 
               {/* Card 5: SOC 2 Type 2 Implementation */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                   </svg>
@@ -433,8 +430,8 @@ function Security() {
               </div>
 
               {/* Card 6: Assured Business Continuity */}
-              <div className="bg-[#f2efea] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-400 rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="w-16 h-16 bg-white rounded-lg border-2 border-black flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
                   </svg>
@@ -451,7 +448,7 @@ function Security() {
                           </section>
 
                  {/* Security Measures Section */}
-         <section className="py-16 bg-[#ede9e6]">
+         <section className="py-16 bg-[#12a2df]">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
              {/* Section Title */}
              <h2 className="text-center mb-12 text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
@@ -463,9 +460,9 @@ function Security() {
                {/* Left Column - 3 Cards */}
                <div className="space-y-6">
                                    {/* Card 1 */}
-                  <div className="bg-[#f2efea] rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
+                  <div className="bg-white rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
                     <div className="flex items-center space-x-4 h-full">
-                      <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
                         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -479,9 +476,9 @@ function Security() {
                   </div>
 
                   {/* Card 2 */}
-                  <div className="bg-[#f2efea] rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
+                  <div className="bg-white rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
                     <div className="flex items-center space-x-4 h-full">
-                      <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
                         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -495,9 +492,9 @@ function Security() {
                   </div>
 
                   {/* Card 3 */}
-                  <div className="bg-[#f2efea] rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
+                  <div className="bg-white rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
                     <div className="flex items-center space-x-4 h-full">
-                      <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
                         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -514,9 +511,9 @@ function Security() {
                {/* Right Column - 2 Cards */}
                <div className="space-y-6">
                                    {/* Card 4 */}
-                  <div className="bg-[#f2efea] rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
+                  <div className="bg-white rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
                     <div className="flex items-center space-x-4 h-full">
-                      <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
                         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -530,9 +527,9 @@ function Security() {
                   </div>
 
                   {/* Card 5 */}
-                  <div className="bg-[#f2efea] rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
+                  <div className="bg-white rounded-2xl shadow-lg py-6 px-4 hover:shadow-xl transition-shadow border border-gray-100 w-full h-32">
                     <div className="flex items-center space-x-4 h-full">
-                      <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
                         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -549,12 +546,12 @@ function Security() {
            </div>
          </section>
          {/* Footer */}
-      <footer className="bg-gray-50 py-16">
+      <footer className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Section - Axiom Brand */}
             <div className="md:col-span-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Axiom</h3>
+              <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
               <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
               <p className="text-gray-700 text-sm">© 2025</p>
             </div>

@@ -7,107 +7,105 @@ function Dataset() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#ede9e6]">
+    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
       {/* Navigation Header */}
-      <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm bg-[#ede9e6] " >
+      <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section */}
-            <div className="flex-shrink-0">
-              <button 
-                onClick={() => navigate('/')}
-                className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight hover:text-gray-700 transition-colors"
-              >
-                Axiom
-              </button>
-            </div>
+                         {/* Logo Section */}
+             <div className="flex-shrink-0">
+               <a href="/" className="flex items-center" aria-label="Universal Drug Discovery">
+                 <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-8 lg:h-20 w-auto" />
+               </a>
+             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
+              
               <div className="bg-gray-100 px-4 py-2 rounded-lg">
                 <div className="flex items-center space-x-6">
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setIsProductsDropdownOpen(true)}
-                    onMouseLeave={() => setIsProductsDropdownOpen(false)}
-                  >
-                    <button
-                      onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-                      className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                    >
-                      Products
-                    </button>
-                    
-                    {/* Products Dropdown */}
-                    {isProductsDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
-                        <div className="grid grid-cols-2 gap-4">
-                          {/* Liver Card */}
-                          <div 
-                            onClick={() => navigate('/products/liver')}
-                            className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
-                          >
-                            <span className="text-gray-900 font-medium">Liver</span>
-                            <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                              <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                              </svg>
-                            </button>
-                          </div>
-                          
-                          {/* Immunogenicity Card */}
-                          <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                            <span className="text-gray-900 font-medium">Immunogenicity <span className="text-gray-400 text-sm">(coming soon)</span></span>
-                            <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                              </svg>
-                            </button>
-                          </div>
-                          
-                          {/* Heart Card */}
-                          <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                            <span className="text-gray-900 font-medium">Heart <span className="text-gray-400 text-sm">(coming soon)</span></span>
-                            <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                              </svg>
-                            </button>
-                          </div>
-                          
-                          {/* Kidney Card */}
-                          <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
-                            <span className="text-gray-900 font-medium">Kidney <span className="text-gray-400 text-sm">(coming soon)</span></span>
-                            <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
-                              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                <div 
+                className="relative"
+                onMouseEnter={() => setIsProductsDropdownOpen(true)}
+                onMouseLeave={() => setIsProductsDropdownOpen(false)}
+              >
+                 <button
+                   onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                   className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                 >
+                   Products
+                 </button>
+                
+                {/* Products Dropdown */}
+                {isProductsDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
+                    <div className="grid grid-cols-2 gap-4">
+                      {/* Liver Card */}
+                      <div 
+                        onClick={() => window.location.href = '/products/liver'}
+                        className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
+                      >
+                        <span className="text-gray-900 font-medium">Liver</span>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                          <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
                       </div>
-                    )}
+                      
+                      {/* Immunogenicity Card */}
+                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                        <span className="text-gray-900 font-medium">Immunogenicity <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      {/* Heart Card */}
+                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                        <span className="text-gray-900 font-medium">Heart <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      {/* Kidney Card */}
+                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                        <span className="text-gray-900 font-medium">Kidney <span className="text-gray-400 text-sm">(coming soon)</span></span>
+                        <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
+                )}
+              </div>
                   <button
-                    onClick={() => navigate('/dataset')}
-                    className="text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-yellow-400"
+                    onClick={() => window.location.href = '/dataset'}
+                    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Datasets
                   </button>
                   <button
-                    onClick={() => navigate('/security')}
+                    onClick={() => window.location.href = '/security'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Security
                   </button>
                   <button
-                    onClick={() => navigate('/publications')}
+                    onClick={() => window.location.href = '/publications'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Publications
                   </button>
                   <button
-                    onClick={() => navigate('/company')}
+                    onClick={() => window.location.href = '/company'}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Company
@@ -119,16 +117,11 @@ function Dataset() {
             {/* Action Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
               <button
-                onClick={() => navigate('/#contact')}
-                style={{backgroundColor: '#ffe24e'}}
+                onClick={() => scrollToSection('contact')}
+                style={{backgroundColor: '#12a2df'}}
                 className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
               >
                 Contact Us
-              </button>
-              <button 
-                style={{backgroundColor: '#ffe24e'}}
-                className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
-                Try Demo
               </button>
             </div>
 
@@ -149,16 +142,15 @@ function Dataset() {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-2">
-                <button onClick={() => navigate('/products')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
+                                 <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
-                  <button onClick={() => navigate('/dataset')} className="text-gray-900 px-3 py-2 text-left bg-yellow-400 rounded">Datasets</button>
-                  <button onClick={() => navigate('/security')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
-                  <button onClick={() => navigate('/publications')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
-                  <button onClick={() => navigate('/company')} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
+                  <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
+                  <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
+                  <button onClick={() => window.location.href = '/publications'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Publications</button>
+                  <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
                 <div className="flex space-x-3 px-3 pt-2">
-                  <button onClick={() => navigate('/#contact')} style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
-                  <button style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Try Demo</button>
+                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#12a2df'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
                 </div>
               </div>
             </div>
@@ -169,10 +161,10 @@ function Dataset() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* Dataset Section */}
-        <section className="py-16 lg:py-20" style={{backgroundColor: '#f2efea'}}>
+        <section className="py-16 lg:py-20" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
             {/* Yellow Banner */}
-            <div className="bg-yellow-400 text-black px-6 py-3 rounded-lg text-lg font-bold mb-8 inline-block">
+            <div className="bg-white text-black px-6 py-3 rounded-lg text-lg font-bold mb-8 inline-block">
               DATASET
             </div>
             
@@ -225,7 +217,7 @@ function Dataset() {
         </section>
         
         {/* Explore Axiom's Data Section */}
-        <section className="py-16 lg:py-20 bg-[#ede9e6]">
+        <section className="py-16 lg:py-20 bg-[#12a2df]">
           <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Explore Axiom's data
@@ -234,7 +226,7 @@ function Dataset() {
         </section>
         
         {/* Axiom Bioatlas Interface Section */}
-        <section className="py-16 lg:py-20 bg-[#ede9e6]">
+        <section className="py-16 lg:py-20 bg-[#12a2df]">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
               {/* Top Bar */}
@@ -594,7 +586,7 @@ function Dataset() {
         </section>
                
                {/* Microscopy Images Section */}
-               <section className="py-16 lg:py-20 bg-[#ede9e6]">
+               <section className="py-16 lg:py-20 bg-[#12a2df]">
                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                      {/* 2D PHH Cell Model */}
@@ -753,7 +745,7 @@ function Dataset() {
                </section>
                
                {/* Statistics Cards Section */}
-               <section className="py-16 lg:py-20 bg-[#ede9e6]  ">
+               <section className="py-16 lg:py-20 bg-[#12a2df]  ">
                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                      {/* Left Card - Human Hours */}
@@ -778,7 +770,7 @@ function Dataset() {
                </section>
                
                {/* Clinical Toxicity Dataset Section */}
-               <section className="py-16 lg:py-20" style={{backgroundColor: '#f2efea'}}>
+               <section className="py-16 lg:py-20" style={{backgroundColor: '#12a2df'}}>
                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
                    {/* Main Heading */}
                    <div className="text-center mb-16">
@@ -811,11 +803,11 @@ function Dataset() {
                </section>
                
                {/* Feature Cards Section */}
-               <section className="py-16 lg:py-20 bg-[#ede9e6]">
+               <section className="py-16 lg:py-20 bg-[#12a2df]">
                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                      {/* Card 1 - Grade 3/4 events */}
-                     <div className="bg-gray-50 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+                     <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
                          <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"/>
@@ -825,7 +817,7 @@ function Dataset() {
                      </div>
                      
                      {/* Card 2 - AST/ALT elevation */}
-                     <div className="bg-gray-50 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+                     <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
                          <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"/>
@@ -835,7 +827,7 @@ function Dataset() {
                      </div>
                      
                      {/* Card 3 - Human PK/PD */}
-                     <div className="bg-gray-50 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+                     <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
                          <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"/>
@@ -845,7 +837,7 @@ function Dataset() {
                      </div>
                      
                      {/* Card 4 - Drug induced liver injury */}
-                     <div className="bg-gray-50 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+                     <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
                        <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
                          <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"/>
@@ -859,12 +851,12 @@ function Dataset() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#f4f2f0] py-16">
+      <footer className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Section - Axiom Brand */}
             <div className="md:col-span-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Axiom</h3>
+                             <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
               <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
               <p className="text-gray-700 text-sm">© 2025</p>
             </div>

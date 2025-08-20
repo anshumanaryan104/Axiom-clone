@@ -11,17 +11,17 @@ function Liver() {
   };
 
   return (
-    <div className="min-h-screen bg-[#ede9e6]">
+    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
       {/* Header */}
-      <header className="shadow-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50" style={{backgroundColor: 'RGB(237, 233, 230, 1)'}}>
+      <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section */}
-            <div className="flex-shrink-0">
-              <a href="/" className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight hover:text-gray-700 transition-colors">
-                Axiom
-              </a>
-            </div>
+                         {/* Logo Section */}
+             <div className="flex-shrink-0">
+               <a href="/" className="flex items-center" aria-label="Universal Drug Discovery">
+                 <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-8 lg:h-20 w-auto" />
+               </a>
+             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
@@ -33,21 +33,24 @@ function Liver() {
                 onMouseEnter={() => setIsProductsDropdownOpen(true)}
                 onMouseLeave={() => setIsProductsDropdownOpen(false)}
               >
-                <button
-                  onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  Products
-                </button>
+                 <button
+                   onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                   className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                 >
+                   Products
+                 </button>
                 
                 {/* Products Dropdown */}
                 {isProductsDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 z-50">
                     <div className="grid grid-cols-2 gap-4">
                       {/* Liver Card */}
-                      <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+                      <div 
+                        onClick={() => window.location.href = '/products/liver'}
+                        className="bg-white rounded-xl border border-gray-200 p-4 flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer"
+                      >
                         <span className="text-gray-900 font-medium">Liver</span>
-                        <button className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" onClick={() => window.location.href = '/products/liver'}>
+                        <button className="w-8 h-8 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
                           <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -119,15 +122,10 @@ function Liver() {
             <div className="hidden lg:flex items-center space-x-3">
               <button
                 onClick={() => scrollToSection('contact')}
-                style={{backgroundColor: '#ffe24e'}}
+                style={{backgroundColor: '#12a2df'}}
                 className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
               >
                 Contact Us
-              </button>
-              <button 
-                style={{backgroundColor: '#ffe24e'}}
-                className="hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
-                Try Demo
               </button>
             </div>
 
@@ -148,7 +146,7 @@ function Liver() {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-2">
-                <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
+                                 <button onClick={() => window.location.href = '/products'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Products</button>
                 <div className="bg-gray-100 px-3 py-2 rounded-lg">
                   <button onClick={() => window.location.href = '/dataset'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Datasets</button>
                   <button onClick={() => window.location.href = '/security'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Security</button>
@@ -156,8 +154,7 @@ function Liver() {
                   <button onClick={() => window.location.href = '/company'} className="text-gray-600 hover:text-gray-900 px-3 py-2 text-left">Company</button>
                 </div>
                 <div className="flex space-x-3 px-3 pt-2">
-                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
-                  <button style={{backgroundColor: '#ffe24e'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Try Demo</button>
+                  <button onClick={() => scrollToSection('contact')} style={{backgroundColor: '#12a2df'}} className="hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Contact Us</button>
                 </div>
               </div>
             </div>
@@ -168,10 +165,10 @@ function Liver() {
       {/* Main Content */}
       <div className="pt-20">
         {/* Liver Title Section */}
-        <section className="py-16" style={{backgroundColor: '#ede9e6'}}>
+        <section className="py-16" style={{backgroundColor: '#12a2df'}}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
             {/* Yellow LIVER INJURY Box */}
-            <div className="inline-block px-6 py-2 rounded-lg font-semibold text-sm mb-8 uppercase tracking-wide" style={{backgroundColor: '#ffe24e'}}>
+            <div className="inline-block px-6 py-2 rounded-lg font-semibold text-sm mb-8 uppercase tracking-wide bg-white">
               LIVER INJURY
             </div>
             
@@ -188,16 +185,16 @@ function Liver() {
         </section>
 
                  {/* Benchmark Card Section */}
-         <section className="py-6 bg-[#ede9e6]">
-           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-             <div className="bg-white rounded-2xl shadow-lg ">
-               <div className="grid grid-cols-1 lg:grid-cols-2 ">
-                                   {/* Left Half */}
-                  <div className="space-y-6 bg-[#f4f2f0] w-full h-full py-12 rounded-xl px-12">
-                  {/* BENCHMARK 1 Tag */}
-                  <div className="inline-block bg-[#ede9e6] text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
-                    BENCHMARK 1
-                  </div>
+                          <section className="py-6 bg-[#12a2df]">
+                   <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                     <div className="bg-white rounded-2xl shadow-lg ">
+                       <div className="grid grid-cols-1 lg:grid-cols-2 ">
+                                     {/* Left Half */}
+                                     <div className="space-y-6 bg-white w-full h-full py-12 rounded-xl px-12">
+                     {/* BENCHMARK 1 Tag */}
+                     <div className="inline-block bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
+                       BENCHMARK 1
+                     </div>
                   
                   {/* Main Text */}
                   <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
@@ -207,7 +204,7 @@ function Liver() {
                   {/* Yellow Dropdown Button */}
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
+                    className="w-12 h-12 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
                   >
                     <svg 
                       className={`w-6 h-6 text-black transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
@@ -250,7 +247,7 @@ function Liver() {
 
               {/* Hidden Dropdown Content */}
               {isDropdownOpen && (
-                <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
                   <p className="text-gray-600 text-center">
                     Additional benchmark data will be displayed here. This content can be customized with charts, metrics, or detailed comparisons.
                   </p>
@@ -260,12 +257,12 @@ function Liver() {
           </div>
         </section>
                  {/* Benchmark Card Section */}
-                 <section className="py-6 bg-[#ede9e6]">
+                 <section className="py-6 bg-[#12a2df]">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
              <div className="bg-white rounded-2xl shadow-lg ">
                <div className="grid grid-cols-1 lg:grid-cols-2 ">
                                    {/* Left Half */}
-                  <div className="space-y-6 bg-[#f4f2f0] w-full h-full py-12 rounded-xl px-12">
+                  <div className="space-y-6 bg-white w-full h-full py-12 rounded-xl px-12">
                   {/* BENCHMARK 1 Tag */}
                   <div className="inline-block bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                     BENCHMARK 2
@@ -279,7 +276,7 @@ function Liver() {
                   {/* Yellow Dropdown Button */}
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
+                    className="w-12 h-12 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
                   >
                     <svg 
                       className={`w-6 h-6 text-black transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
@@ -322,7 +319,7 @@ function Liver() {
 
               {/* Hidden Dropdown Content */}
               {isDropdownOpen && (
-                <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
                   <p className="text-gray-600 text-center">
                     Additional benchmark data will be displayed here. This content can be customized with charts, metrics, or detailed comparisons.
                   </p>
@@ -333,12 +330,12 @@ function Liver() {
                  </section>
 
          {/* Benchmark Card Section 3 */}
-         <section className="py-6 bg-[#ede9e6]">
+         <section className="py-6 bg-[#12a2df]">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
              <div className="bg-white rounded-2xl shadow-lg ">
                <div className="grid grid-cols-1 lg:grid-cols-2 ">
                  {/* Left Half */}
-                 <div className="space-y-6 bg-[#f4f2f0] w-full h-full py-12 rounded-xl px-12">
+                 <div className="space-y-6 bg-white w-full h-full py-12 rounded-xl px-12">
                    {/* BENCHMARK 3 Tag */}
                    <div className="inline-block bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                      BENCHMARK 3
@@ -352,7 +349,7 @@ function Liver() {
                    {/* Yellow Dropdown Button */}
                    <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
+                    className="w-12 h-12 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
                   >
                     <svg 
                       className={`w-6 h-6 text-black transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
@@ -395,7 +392,7 @@ function Liver() {
 
                {/* Hidden Dropdown Content */}
                {isDropdownOpen && (
-                 <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                 <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
                    <p className="text-gray-600 text-center">
                      Additional benchmark data will be displayed here. This content can be customized with charts, metrics, or detailed comparisons.
                    </p>
@@ -405,12 +402,12 @@ function Liver() {
            </div>
          </section>
          {/* Benchmark Card Section 4 */}
-         <section className="py-6 bg-[#ede9e6]">
+         <section className="py-6 bg-[#12a2df]">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
              <div className="bg-white rounded-2xl shadow-lg ">
                <div className="grid grid-cols-1 lg:grid-cols-2 ">
                  {/* Left Half */}
-                 <div className="space-y-6 bg-[#f4f2f0] w-full h-full py-12 rounded-xl px-12">
+                 <div className="space-y-6 bg-white w-full h-full py-12 rounded-xl px-12">
                    {/* BENCHMARK 4 Tag */}
                    <div className="inline-block bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                      BENCHMARK 4
@@ -424,7 +421,7 @@ function Liver() {
                    {/* Yellow Dropdown Button */}
                    <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
+                    className="w-12 h-12 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
                   >
                     <svg 
                       className={`w-6 h-6 text-black transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
@@ -467,7 +464,7 @@ function Liver() {
 
                {/* Hidden Dropdown Content */}
                {isDropdownOpen && (
-                 <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                 <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
                    <p className="text-gray-600 text-center">
                      Additional benchmark data will be displayed here. This content can be customized with charts, metrics, or detailed comparisons.
                    </p>
@@ -477,12 +474,12 @@ function Liver() {
            </div>
          </section>
          {/* Benchmark Card Section 5 */}
-         <section className="py-6 bg-[#ede9e6]">
+         <section className="py-6 bg-[#12a2df]">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
              <div className="bg-white rounded-2xl shadow-lg ">
                <div className="grid grid-cols-1 lg:grid-cols-2 ">
                  {/* Left Half */}
-                 <div className="space-y-6 bg-[#f4f2f0] w-full h-full py-12 rounded-xl px-12">
+                 <div className="space-y-6 bg-white w-full h-full py-12 rounded-xl px-12">
                    {/* BENCHMARK 5 Tag */}
                    <div className="inline-block bg-gray-300 text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                      BENCHMARK 5
@@ -496,7 +493,7 @@ function Liver() {
                    {/* Yellow Dropdown Button */}
                    <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
+                    className="w-12 h-12 bg-[#12a2df] rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors shadow-lg"
                   >
                     <svg 
                       className={`w-6 h-6 text-black transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
@@ -539,7 +536,7 @@ function Liver() {
 
                {/* Hidden Dropdown Content */}
                {isDropdownOpen && (
-                 <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                 <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
                    <p className="text-gray-600 text-center">
                      Additional benchmark data will be displayed here. This content can be customized with charts, metrics, or detailed comparisons.
                    </p>
@@ -550,7 +547,7 @@ function Liver() {
                    </section>
 
           {/* Proprietary Data Section */}
-          <section className="py-16" style={{backgroundColor: '#f2efea'}}>
+          <section className="py-16" style={{backgroundColor: '#12a2df'}}>
             <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
               {/* Main Title */}
               <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
@@ -571,7 +568,7 @@ function Liver() {
                      </section>
 
            {/* STEP 1 Dataset Section */}
-           <section className="py-16 bg-[#ede9e6]">
+           <section className="py-16 bg-[#12a2df]">
              <div className="max-w-7xl mx-auto px-6 lg:px-8">
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                  {/* Left Column - Dataset Visualization */}
@@ -598,7 +595,7 @@ function Liver() {
                          {[...Array(8)].map((_, i) => (
                            <div
                              key={`yellow-${i}`}
-                             className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+                             className="absolute w-2 h-2 bg-[#12a2df] rounded-full"
                              style={{
                                left: `${i * 8}px`,
                                top: `${i * 6}px`,
@@ -621,7 +618,7 @@ function Liver() {
                  {/* Right Column - STEP 1 Information */}
                  <div className="space-y-8">
                    {/* STEP 1 Tag */}
-                   <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
+                   <div className="inline-block bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                      STEP 1
                    </div>
                    
@@ -635,7 +632,7 @@ function Liver() {
                    {/* Bullet Points */}
                    <div className="space-y-6">
                      <div className="flex items-start space-x-4">
-                       <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                       <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                          <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                          </svg>
@@ -646,7 +643,7 @@ function Liver() {
                      </div>
                      
                      <div className="flex items-start space-x-4">
-                       <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                       <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                          <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                          </svg>
@@ -657,7 +654,7 @@ function Liver() {
                      </div>
                      
                      <div className="flex items-start space-x-4">
-                       <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                       <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                          <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                          </svg>
@@ -675,7 +672,7 @@ function Liver() {
                        </section>
 
             {/* STEP 2 Biological Quantification Section */}
-            <section className="py-16 bg-[#ede9e6]">
+            <section className="py-16 bg-[#12a2df]">
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                      {/* Left Column - RNA Condensate Microscopy Image */}
@@ -757,7 +754,7 @@ function Liver() {
                   {/* Right Column - STEP 2 Information */}
                   <div className="space-y-8">
                     {/* STEP 2 Tag */}
-                    <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
+                    <div className="inline-block bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                       STEP 2
                     </div>
                     
@@ -769,7 +766,7 @@ function Liver() {
                     {/* Bullet Points */}
                     <div className="space-y-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                           <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -780,7 +777,7 @@ function Liver() {
                       </div>
                       
                       <div className="flex items-start space-x-4">
-                        <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                           <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -791,7 +788,7 @@ function Liver() {
                       </div>
                       
                       <div className="flex items-start space-x-4">
-                        <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                           <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                           </svg>
@@ -810,7 +807,7 @@ function Liver() {
                          </section>
 
              {/* STEP 3 Model Learning Section */}
-             <section className="py-16 bg-[#ede9e6]">
+             <section className="py-16 bg-[#12a2df]">
                <div className="max-w-7xl mx-auto px-6 lg:px-8">
                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                    {/* Left Column - Molecular Interface */}
@@ -855,7 +852,7 @@ function Liver() {
                    {/* Right Column - STEP 3 Information */}
                    <div className="space-y-8">
                      {/* STEP 3 Tag */}
-                     <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
+                     <div className="inline-block bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                        STEP 3
                      </div>
                      
@@ -868,7 +865,7 @@ function Liver() {
                      {/* Bullet Points */}
                      <div className="space-y-6">
                        <div className="flex items-start space-x-4">
-                         <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                         <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                            <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                            </svg>
@@ -879,7 +876,7 @@ function Liver() {
                        </div>
                        
                        <div className="flex items-start space-x-4">
-                         <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                         <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                            <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                            </svg>
@@ -890,7 +887,7 @@ function Liver() {
                        </div>
                        
                        <div className="flex items-start space-x-4">
-                         <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                         <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                            <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                            </svg>
@@ -908,7 +905,7 @@ function Liver() {
                            </section>
 
               {/* STEP 4 Clinical Risk Assessment Section */}
-              <section className="py-16 bg-[#ede9e6]" >
+              <section className="py-16 bg-[#12a2df]" >
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Column - Clinical Risk Graph */}
@@ -1008,7 +1005,7 @@ function Liver() {
                     {/* Right Column - STEP 4 Information */}
                     <div className="space-y-8">
                       {/* STEP 4 Tag */}
-                      <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
+                      <div className="inline-block bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wide">
                         STEP 4
                       </div>
                       
@@ -1020,7 +1017,7 @@ function Liver() {
                       {/* Bullet Points */}
                       <div className="space-y-6">
                         <div className="flex items-start space-x-4">
-                          <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                             <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                             </svg>
@@ -1031,7 +1028,7 @@ function Liver() {
                         </div>
                         
                         <div className="flex items-start space-x-4">
-                          <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                             <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                             </svg>
@@ -1042,7 +1039,7 @@ function Liver() {
                         </div>
                         
                         <div className="flex items-start space-x-4">
-                          <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                             <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                             </svg>
@@ -1058,7 +1055,7 @@ function Liver() {
               </section>
 
               {/* Inside Our Model Section */}
-              <section className="py-16" style={{backgroundColor: '#f2efea'}}>
+              <section className="py-16" style={{backgroundColor: '#12a2df'}}>
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                   {/* Main Title */}
                   <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
@@ -1073,7 +1070,7 @@ function Liver() {
               </section>
 
               {/* Clinical Risk Assessment Flowchart */}
-              <section className="py-16 bg-[#ede9e6]">
+              <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   
                   
@@ -1082,7 +1079,7 @@ function Liver() {
                     <div className="flex flex-col lg:flex-row items-stretch space-y-6 lg:space-y-0 lg:space-x-6">
                       
                       {/* Input Card */}
-                      <div className="flex-1 bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200">
                         <div className="bg-yellow-400 text-black px-3 py-1 rounded-lg text-sm font-semibold uppercase tracking-wide mb-4 inline-block">
                           Input
                         </div>
@@ -1107,7 +1104,7 @@ function Liver() {
                       </div>
 
                       {/* Training In Silico Models Card */}
-                      <div className="flex-1 bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200">
                         <div className="bg-yellow-400 text-black px-3 py-1 rounded-lg text-sm font-semibold uppercase tracking-wide mb-4 inline-block">
                           Training In Silico Models
                         </div>
@@ -1146,7 +1143,7 @@ function Liver() {
                       </div>
 
                       {/* In Silico Biological Predictions Card */}
-                      <div className="flex-1 bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200">
                         <div className="bg-yellow-400 text-black px-3 py-1 rounded-lg text-sm font-semibold uppercase tracking-wide mb-4 inline-block">
                           In Silico Biological Predictions
                         </div>
@@ -1237,7 +1234,7 @@ function Liver() {
                       </div>
 
                       {/* Clinical Training Data Card */}
-                      <div className="flex-1 bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200">
                         <div className="bg-yellow-400 text-black px-3 py-1 rounded-lg text-sm font-semibold uppercase tracking-wide mb-4 inline-block">
                           Clinical Training Data
                         </div>
@@ -1267,7 +1264,7 @@ function Liver() {
                       </div>
 
                       {/* Clinical Risk Assessment Card */}
-                      <div className="flex-1 bg-gray-50 rounded-xl p-6 border border-gray-200">
+                      <div className="flex-1 bg-white rounded-xl p-6 border border-gray-200">
                         <div className="bg-yellow-400 text-black px-3 py-1 rounded-lg text-sm font-semibold uppercase tracking-wide mb-4 inline-block">
                           Clinical Risk Assessment
                         </div>
@@ -1339,7 +1336,7 @@ function Liver() {
               </section>
 
               {/* Web Application Section */}
-              <section className="py-16 bg-[#ede9e6]">
+              <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                   <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
                     Assess toxicity in a<br />
@@ -1353,7 +1350,7 @@ function Liver() {
               </section>
 
               {/* Web Application Interface Demo */}
-              <section className="py-16 bg-[#ede9e6]">
+              <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
                     {/* Top Browser Bar */}
@@ -1617,7 +1614,7 @@ function Liver() {
               </section>
 
               {/* Liver Services Section */}
-              <section className="py-16 bg-[#ede9e6]">
+              <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
                   <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
                     Liver Services
@@ -1630,7 +1627,7 @@ function Liver() {
               </section>
 
               {/* Clinical Liver Risk Assessment Flowchart */}
-              <section className="py-16 bg-[#ede9e6]">
+              <section className="py-16 bg-[#12a2df]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="bg-white rounded-2xl shadow-lg p-8">
                     {/* Top Section - In Silico Clinical Liver Risk Assessment */}
@@ -1975,13 +1972,13 @@ function Liver() {
                 </div>
               </section>
 
-              {/* Footer */}
-        <footer className="bg-[#f4f2f0] py-16">
+        {/* Footer */}
+        <footer className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {/* Left Section - Axiom Brand */}
               <div className="md:col-span-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Axiom</h3>
+                <img src="/udd-logo.png" alt="UDD - Universal Drug Discovery" className="h-12 w-auto mb-2" />
                 <p className="text-gray-700 mb-8">Eliminate drug toxicity</p>
                 <p className="text-gray-700 text-sm">© 2025</p>
               </div>
