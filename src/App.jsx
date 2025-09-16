@@ -539,7 +539,7 @@ function HomePage() {
             {/* Navigation Indicator */}
             <div className="text-center mt-4">
               <p className="text-gray-500 text-sm">
-                Showing {currentCardSet === 0 ? '1-3' : '4-6'} of 6 sources
+                Showing {currentCardSet === 0 ? '1-3' : '4'} of 4 sources
               </p>
           </div>
         </section>
