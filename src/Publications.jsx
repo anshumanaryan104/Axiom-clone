@@ -11,7 +11,7 @@ function Publications() {
   };
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
+    <div className="min-h-screen">
       {/* Header */}
       
       <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
@@ -161,7 +161,7 @@ function Publications() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* Publications Title Section */}
-        <section className="py-20 bg-[#12a2df]">
+        <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900">
               Publications
@@ -170,7 +170,7 @@ function Publications() {
         </section>
 
                  {/* Filter Buttons Section */}
-         <section className="bg-[#12a2df] -mt-10">
+         <section className="-mt-10">
            <div className="max-w-4xl mx-auto px-0 ml-20">
              <div className="flex justify-start ">
                <div className="flex space-x-1">
@@ -230,7 +230,7 @@ function Publications() {
          </section>
 
                                                                                                                                                                                                                                                                                                                                {/* Publications Cards Section */}
-              <section className="py-12 bg-[#12a2df]">
+              <section className="py-12">
                 <div className="w-full px-12 lg:px-16">
                   <div className="space-y-6">
                     {/* Card 1 - VIDEO */}
@@ -325,7 +325,7 @@ function Publications() {
               </section>
 
           {/* Newsletter Subscription Section */}
-          <section className="pt-0 pb-8 bg-[#12a2df]">
+          <section className="pt-0 pb-8">
             <div className="w-full px-12 lg:px-16">
                                  <div className="bg-white rounded-xl shadow-lg pt-12 pr-10 pb-6 pl-12 text-center min-h-[350px] flex flex-col justify-center">
                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">

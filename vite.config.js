@@ -6,6 +6,10 @@ import autoprefixer from 'autoprefixer'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: '0.0.0.0', // Allow external connections
+    port: 3000, // Use port 3000
+  },
   css: {
     postcss: {
       plugins: [

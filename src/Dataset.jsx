@@ -7,7 +7,7 @@ function Dataset() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#12a2df'}}>
+    <div className="min-h-screen">
       {/* Navigation Header */}
       <header className="fixed top-0 w-full border-b border-gray-200 z-50 shadow-sm h-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,54 +156,57 @@ function Dataset() {
       {/* Main Content */}
       <main className="pt-16 lg:pt-20">
         {/* Dataset Section */}
-        <section className="py-16 lg:py-20" style={{backgroundColor: '#12a2df'}}>
+        <section className="py-16 lg:py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-            {/* Yellow Banner */}
-            <div className="bg-white text-black px-6 py-3 rounded-lg text-lg font-bold mb-8 inline-block">
-              DATASET
+            {/* Section Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-800 text-sm font-medium mb-4">
+              Dataset
             </div>
             
             {/* Main Text */}
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-16">
-              We did the lab work to create the world's largest human toxicity dataset
+            <h1 className="text-3xl lg:text-5xl font-semibold text-gray-900 leading-tight tracking-tight mb-3">
+              We built the world’s largest human toxicity dataset
             </h1>
+            <p className="text-base lg:text-lg text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Curated at scale with rigorous lab validation to power modern ML for safer, faster discovery.
+            </p>
             
             {/* Data Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Card 1 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">115,000+</div>
-                <div className="text-lg text-gray-600">Unique small molecules</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">115,000+</div>
+                <div className="text-sm text-gray-600">Unique small molecules</div>
               </div>
               
               {/* Card 2 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">1,300+</div>
-                <div className="text-lg text-gray-600">Unique targets</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">1,300+</div>
+                <div className="text-sm text-gray-600">Unique targets</div>
               </div>
               
               {/* Card 3 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">50,000+</div>
-                <div className="text-lg text-gray-600">Unique scaffolds</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">50,000+</div>
+                <div className="text-sm text-gray-600">Unique scaffolds</div>
               </div>
               
               {/* Card 4 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">3,300+</div>
-                <div className="text-lg text-gray-600">Macrocyclic compounds</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">3,300+</div>
+                <div className="text-sm text-gray-600">Macrocyclic compounds</div>
               </div>
               
               {/* Card 5 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">9,500+</div>
-                <div className="text-lg text-gray-600">PROTACs and molecular glues</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">9,500+</div>
+                <div className="text-sm text-gray-600">PROTACs and molecular glues</div>
               </div>
               
               {/* Card 6 */}
-              <div className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer">
-                <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">700+</div>
-                <div className="text-lg text-gray-600">Clinical molecules from FDA's DILIrank</div>
+              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-1">700+</div>
+                <div className="text-sm text-gray-600">Clinical molecules from FDA's DILIrank</div>
               </div>
             </div>
           </div>
